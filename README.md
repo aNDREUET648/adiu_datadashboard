@@ -45,7 +45,7 @@ El desarrollo de la practica será utilizando:
   Una API proporciona una forma conveniente para que dos aplicaciones se comuniquen entre sí. 
   El beneficio es que, si los datos alguna vez cambian, su aplicación web automáticamente tendrá los datos correctos.
 
-  [Enunciado Original](https://github.com/aNDREUET648/adiu_datadashboard/blob/master/Data%20Dashboard/Enunciado%20de%20la%20pr%C3%A1ctica.pdf)
+  [Enunciado Original](./Data%20Dashboard/Enunciado%20de%20la%20pr%C3%A1ctica.pdf)
 
 ---
 
