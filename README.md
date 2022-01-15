@@ -10,8 +10,8 @@
 - [Versión Avanzada](#versión-avanzada)
 - [Estructura](#estructura)
 - [Consideraciones](#consideraciones)
-  - [Sobre la Hoja de estilos](#sobre-la-hoja-de-estilos)
-  - [Carácteres especiales](#carácteres-especiales)
+  - [Página principal](#página-principal)
+    - [index.php](#index.php)
   - [Accesibilidad](#accesibilidad)
   - [Validación del código](#validación-del-código)
   - [HTML Responsive Web Design](#HTML-Responsive-Web-Design)
@@ -77,20 +77,15 @@ Data Dashboard
 
 ### Consideraciones
 
-#### Sobre la página principal
+#### Página principal
 
   A continuación vemos una imagen ejemplo de lo que la página muestra al acceder a ella
 
  ![Sample Page](./Data%20Dashboard/images/sample_page.png?raw=true "Muestra de la página resultante")
   
-  
-```
-  <head>
-    <link rel="stylesheet" href="hojaestilos.css">
-  </head>
-```
 
-#### Carácteres especiales
+
+##### index.php
 
 Mediante el uso de `<meta charset="UTF-8">` represento la codificación de carácteres UTF-8 (estándar en HTML5) aunque es posible que en algún proceso:
 
@@ -100,6 +95,14 @@ Mediante el uso de `<meta charset="UTF-8">` represento la codificación de cará
 
 Para la representación del texto uso una herramienta online para convertir el texto simple a
 codificación html (www.textfixeres.com/html/texto-a-html.php)
+
+
+  
+```
+  <head>
+    <link rel="stylesheet" href="hojaestilos.css">
+  </head>
+```
 
 #### Accesibilidad
 
