@@ -14,8 +14,6 @@
     - [Front-end](#front-end)
     - [Back-end](#back-end)
 - [Server Side](#server-side)
-  - [Validación del código](#validación-del-código)
-  - [HTML Responsive Web Design](#HTML-Responsive-Web-Design)
 - [Bibliografía y Herramientas](#bibliografía-y-herramientas)
 
 ### Introducción
