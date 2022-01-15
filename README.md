@@ -98,7 +98,7 @@ La página principal `index.php` es bastante escueta ya que casi el grueso del c
   - Realizo 4 peticiones al servidor (una por cada gráfica) mediante una petición *Ajax HTTP POST*. Para ello uso el método $.post() de *jQuery*
   - Recibo la información del servidor
   - Proceso los datos y los adapto para acomodarlo a los arrays que necesitaré
-  - Defino el tipo de gráficas que necesitaré y las parametrizo (usando la biblioteca de *HighCharts*)
+  - Defino el tipo de gráficas que necesitaré y las parametrizo (usando la biblioteca de [*HighCharts*](https://www.highcharts.com/docs/index))
   - Los datos arrays obtenidos anteriormente los inserto en mis gráficas para que puedan ser representados en mi página Web
 
 #### Server Side
