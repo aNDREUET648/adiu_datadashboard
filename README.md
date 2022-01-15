@@ -11,7 +11,8 @@
 - [Estructura](#estructura)
 - [Consideraciones](#consideraciones)
   - [Página principal](#página-principal)
-    - [Archivo index.php](#index) 
+    - [Front-end](#front-end)
+    - [Back-end](#back-end)
   - [Accesibilidad](#accesibilidad)
   - [Validación del código](#validación-del-código)
   - [HTML Responsive Web Design](#HTML-Responsive-Web-Design)
@@ -79,19 +80,29 @@ Data Dashboard
 
 #### Página principal
 
-  A continuación vemos una imagen ejemplo de lo que la página muestra al acceder a ella
+**Client Side** 
+A continuación vemos una imagen ejemplo de lo que la página muestra al acceder a ella
 
  ![Sample Page](./Data%20Dashboard/images/sample_page.png?raw=true "Muestra de la página resultante")
-  
 
+##### Front-end
 
-##### index
+La página principal `index.php` es bastante escueta ya que casi el grueso del código lo gestiona el back-end que se encuentra en el archivo JavaScrip `client.js`. Así que aquí lo que hacemos es:
 
-Mediante el uso de `<meta charset="UTF-8">` represento la codificación de carácteres UTF-8 (estándar en HTML5) aunque es posible que en algún proceso:
+- En el `<head>` realizo las llamadas a las librerías jQuery, HighCharts y hoja de estilo de Bootstrap mediante el uso de los CDN disponibles y no tenerlos cargados localmente.
+- En el `<body>`:
+  -  Diseño (mediante Bootstrap) mi barra de navegación y mi estructura (2x2 Grid) donde irán colocadas cada una de mis Charts.
+  -  Realizo la llamada a mi back-end `client.js`.
+  -  Incluyo el Bootstrap JavaScript al final de la página (justo antes del `</body>`) por recomendación de ellos mismos [ellos mismos](https://getbootstrap.com/docs/5.1/getting-started/introduction/#js).
 
-- Otra persona interviene en la creación de la página y emplea codificación 88509-1.
-- El servidor web guarda las páginas HTML estáticas.
-- El cliente web del usuario no representa igual las páginas....
+##### Back-end
+
+  En este archivo `client.js` realizo:
+  - Realizo 4 peticiones al servidor (una por cada gráfica) mediante una petición Ajax HTTP POST. Para ello uso el método $.post() de jQuery
+  - Recibo la información del servidor
+  - Proceso los datos y los adapto para acomodarlo a los arrays que necesitaré
+  - Defino el tipo de gráficas que necesitaré y las parametrizo (usando la biblioteca de HighCharts)
+  - Los datos arrays obtenidos anteriormente los inserto en mis gráficas para que puedan ser representados en mi página Web
 
 Para la representación del texto uso una herramienta online para convertir el texto simple a
 codificación html (www.textfixeres.com/html/texto-a-html.php)
