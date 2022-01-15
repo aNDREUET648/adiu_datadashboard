@@ -142,22 +142,6 @@ De forma resumida este el código que realiza el servidor:
   - Devuelve los resultados al cliente que hizo la petición codificándolo antes en formato *JSON* con `json_encode`
 
 
-#### Validación del código
-
-Del mismo modo finalizada la codificación de la página y para comprobar que todo mi código, tanto el HTML como la hoja de estilos CSS eran correctos también han sido evaluados con los validadores de la **W3C** (_The World Wide Web Consortium_) y con un resultado que el archivo ```hojaestilos.css``` es _CSS versión 3 + SVG_ válido! y el archivo ```index.html``` es _Valid XHTML 1.0 Strict_. Es por ello que, al final de la página he incluído los iconos correspondientes.
-
-#### HTML Responsive Web Design
-
-
-Revisando el tutorial que ofrece w3c.org [Tutorial HTML](https://www.w3schools.com/html) me fije que tienen un apartado de [HTML Responsive](https://www.w3schools.com/html/html_responsive.asp) con la idea de adaptar la apariencia de las páginas web al dispositivo que se esté utilizando, ya sean móviles, laptops, tablets o desktops. Y aprovechando que era mi primera página web aproveché para incluir simplemente unos `media-query` o `breakpoints`como los llaman para dependiendo de donde se estuviese viendo la página se adaptase en tamaño. Destaqué cuatro tipos, todos los valores los extraje de información del framework `Bootstrap` considerándose como los más comunes.
-
-  
-```
-  <head>
-    <link rel="stylesheet" href="hojaestilos.css">
-  </head>
-```
-
 ---
 
 ### Bibliografía y Herramientas
@@ -167,9 +151,8 @@ Revisando el tutorial que ofrece w3c.org [Tutorial HTML](https://www.w3schools.c
   - [php](https://www.php.net/) - Lenguaje de programación. Manuales de referencia
   - [Bootstrap](https://getbootstrap.com/) - Biblioteca multiplataforma para el diseño de sitios y aplicaciones web (front-end side). Templates y documentación de referencia
   - [HighCharts](https://www.highcharts.com/) - Biblioteca en JavaScript para visualización de gráficos (back-end side). Templates y documentación de referencia
+  - [MySQL and PHP](https://downloads.mysql.com/docs/apis-php-en.pdf) - Documentación de la API MySQL con PHP.
 
-
-https://downloads.mysql.com/docs/apis-php-en.pdf
 
 ---
 [aNDREUET648](https://github.com/aNDREUET648)
