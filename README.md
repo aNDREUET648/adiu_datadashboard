@@ -9,11 +9,11 @@
 - [Requisitos mínimos](#requisitos-mínimos)
 - [Versión Avanzada](#versión-avanzada)
 - [Estructura](#estructura)
-- [Consideraciones](#consideraciones)
+- [Client Side](#client-side)
   - [Página principal](#página-principal)
     - [Front-end](#front-end)
     - [Back-end](#back-end)
-  - [Accesibilidad](#accesibilidad)
+- [Server Side](#server-side)
   - [Validación del código](#validación-del-código)
   - [HTML Responsive Web Design](#HTML-Responsive-Web-Design)
 - [Bibliografía y Herramientas](#bibliografía-y-herramientas)
@@ -76,24 +76,23 @@ Data Dashboard
 ```
 ---
 
-### Consideraciones
+### Client Side
 
 #### Página principal
 
-**Client Side** 
 A continuación vemos una imagen ejemplo de lo que la página muestra al acceder a ella
 
  ![Sample Page](./Data%20Dashboard/images/sample_page.png?raw=true "Muestra de la página resultante")
 
 ##### Front-end
 
-La página principal `index.php` es bastante escueta ya que casi el grueso del código lo gestiona el back-end que se encuentra en el archivo JavaScrip `client.js`. Así que aquí lo que hacemos es:
+La página principal `index.php` es bastante escueta ya que casi el grueso del código lo gestiona el back-end que se encuentra en el archivo JavaScript `client.js`. Así que aquí lo que hacemos es:
 
 - En el `<head>` realizo las llamadas a las librerías jQuery, HighCharts y hoja de estilo de Bootstrap mediante el uso de los CDN disponibles y no tenerlos cargados localmente.
 - En el `<body>`:
   -  Diseño (mediante Bootstrap) mi barra de navegación y mi estructura (2x2 Grid) donde irán colocadas cada una de mis Charts.
   -  Realizo la llamada a mi back-end `client.js`.
-  -  Incluyo el Bootstrap JavaScript al final de la página (justo antes del `</body>`) por recomendación de ellos mismos [ellos mismos](https://getbootstrap.com/docs/5.1/getting-started/introduction/#js).
+  -  Incluyo el Bootstrap JavaScript al final de la página (justo antes del `</body>`) por recomendación de [ellos mismos](https://getbootstrap.com/docs/5.1/getting-started/introduction/#js).
 
 ##### Back-end
 
@@ -104,18 +103,7 @@ La página principal `index.php` es bastante escueta ya que casi el grueso del c
   - Defino el tipo de gráficas que necesitaré y las parametrizo (usando la biblioteca de HighCharts)
   - Los datos arrays obtenidos anteriormente los inserto en mis gráficas para que puedan ser representados en mi página Web
 
-Para la representación del texto uso una herramienta online para convertir el texto simple a
-codificación html (www.textfixeres.com/html/texto-a-html.php)
-
-
-  
-```
-  <head>
-    <link rel="stylesheet" href="hojaestilos.css">
-  </head>
-```
-
-#### Accesibilidad
+#### Server Side
 
 Durante la confección de la página se ha tenido todo el tiempo en cuenta el diseño pensando en la accesibilidad. Una vez finalizada, se ha testeado manualmente y validado con distintas herramientas tanto online como extensiones del navegador obteniendo un _Nivel de Conformidad AA_ indicándose así que se han cumplido todos los puntos de control de Prioridad 1 y Prioridad 2 definidos en las Directrices de la **WAI** (_Web Accessibility Initiative_). Incluyendo al final de la página el icono correspondiente a su Nivel de Conformidad.
 
@@ -127,6 +115,13 @@ Del mismo modo finalizada la codificación de la página y para comprobar que to
 
 
 Revisando el tutorial que ofrece w3c.org [Tutorial HTML](https://www.w3schools.com/html) me fije que tienen un apartado de [HTML Responsive](https://www.w3schools.com/html/html_responsive.asp) con la idea de adaptar la apariencia de las páginas web al dispositivo que se esté utilizando, ya sean móviles, laptops, tablets o desktops. Y aprovechando que era mi primera página web aproveché para incluir simplemente unos `media-query` o `breakpoints`como los llaman para dependiendo de donde se estuviese viendo la página se adaptase en tamaño. Destaqué cuatro tipos, todos los valores los extraje de información del framework `Bootstrap` considerándose como los más comunes.
+
+  
+```
+  <head>
+    <link rel="stylesheet" href="hojaestilos.css">
+  </head>
+```
 
 ---
 
