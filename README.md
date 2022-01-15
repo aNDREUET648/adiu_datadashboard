@@ -85,7 +85,7 @@ Data Dashboard
   
 
 
-##### index
+##### index.php
 
 Mediante el uso de `<meta charset="UTF-8">` represento la codificación de carácteres UTF-8 (estándar en HTML5) aunque es posible que en algún proceso:
 
