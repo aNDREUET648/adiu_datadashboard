@@ -45,7 +45,7 @@ El desarrollo de la practica será utilizando:
   Una API proporciona una forma conveniente para que dos aplicaciones se comuniquen entre sí. 
   El beneficio es que, si los datos alguna vez cambian, su aplicación web automáticamente tendrá los datos correctos.
 
-  [Enunciado Original](https://github.com/aNDREUET648/adiu_practica1/blob/master/ADIU%20-%20Practice%2029_11_21.pdf)
+  [Enunciado Original](https://github.com/aNDREUET648/adiu_datadashboard/blob/master/Data%20Dashboard/Enunciado%20de%20la%20pr%C3%A1ctica.pdf)
 
 ---
 
@@ -55,6 +55,7 @@ El desarrollo de la practica será utilizando:
 ```
 Data Dashboard
 ├── index.php                             Página web principal (.php)
+├── Enunciado de la práctica.pdf          Documento original de la práctica
 ├── images                                Directorio de las imágenes
 │   └── black_flag_logo-768x768.png       Logo de la barra de navegación
 │   └── favicon.ico                       Icono de la página (Favorite Icon)
@@ -78,9 +79,9 @@ Data Dashboard
 
 #### Sobre la página principal
 
-  No tanto por el tamaño de la página pero si para empezar a seguir una guía de buenas prácticas y por recomendación de la profesora he decidido insertar mi hoja de estilos de manera externa `External CSS` y no `Internal CSS` como he estado usando hasta ahora, definidos dentro del elemento `<style>`, dentro de la sección '<head>' de la página HTML.
+  A continuación vemos una imagen ejemplo de lo que la página muestra al acceder a ella
 
- ![Image text](https://github.com/aNDREUET648/datadashboard/blob/master/Data%20Dashboard/images/sample_page.png)
+ ![Sample Page](./blob/master/Data%20Dashboard/images/sample_page.png?raw=true "Muestra de la página resultante")
   
   
 ```
