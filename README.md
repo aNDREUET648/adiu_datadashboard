@@ -1,6 +1,6 @@
 # 21724 - Aplicacions Distribuïdes a Internet i Interficies d'Usuari
 
-## [***Data Dashboard***](https://github.com/aNDREUET648/datadashboard/)
+## [***Data Dashboard***](https://github.com/aNDREUET648/adiu_datadashboard)
 
 
 ## Tabla de contenido
