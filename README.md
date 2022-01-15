@@ -80,7 +80,7 @@ Data Dashboard
 
   No tanto por el tamaño de la página pero si para empezar a seguir una guía de buenas prácticas y por recomendación de la profesora he decidido insertar mi hoja de estilos de manera externa `External CSS` y no `Internal CSS` como he estado usando hasta ahora, definidos dentro del elemento `<style>`, dentro de la sección '<head>' de la página HTML.
 
- ![Image text](https://github.com/aNDREUET648/datadashboard/blob/master/Data%20Dashboard/images/P%C3%A1gina%20Principal.png?raw=true)
+ ![Image text](https://github.com/aNDREUET648/datadashboard/blob/master/Data%20Dashboard/images/sample_page.png)
   
   
 ```
