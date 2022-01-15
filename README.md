@@ -86,26 +86,61 @@ A continuación vemos una imagen ejemplo de lo que la página muestra al acceder
 
 ##### Front-end
 
-La página principal `index.php` es bastante escueta ya que casi el grueso del código lo gestiona el back-end que se encuentra en el archivo JavaScript `client.js`. Así que aquí lo que hacemos es:
+La página principal `index.php` es bastante escueta ya que casi el grueso del código lo gestiona el back-end que se encuentra en el archivo *JavaScript* `client.js`. Así que aquí lo que hacemos es:
 
-- En el `<head>` realizo las llamadas a las librerías jQuery, HighCharts y hoja de estilo de Bootstrap mediante el uso de los CDN disponibles y no tenerlos cargados localmente.
+- En el `<head>` realizo las llamadas a las librerías *jQuery*, *HighCharts* y hoja de estilo de *Bootstrap* mediante el uso de los CDN disponibles y no tenerlos cargados localmente.
 - En el `<body>`:
-  -  Diseño (mediante Bootstrap) mi barra de navegación y mi estructura (2x2 Grid) donde irán colocadas cada una de mis Charts.
+  -  Diseño (mediante *Bootstrap*) mi barra de navegación y mi estructura (2x2 Grid) donde irán colocadas cada una de mis gráficas.
   -  Realizo la llamada a mi back-end `client.js`.
-  -  Incluyo el Bootstrap JavaScript al final de la página (justo antes del `</body>`) por recomendación de [ellos mismos](https://getbootstrap.com/docs/5.1/getting-started/introduction/#js).
+  -  Incluyo el *Bootstrap JavaScript* al final de la página (justo antes del `</body>`) por recomendación de [ellos mismos](https://getbootstrap.com/docs/5.1/getting-started/introduction/#js).
 
 ##### Back-end
 
   En este archivo `client.js` realizo:
-  - Realizo 4 peticiones al servidor (una por cada gráfica) mediante una petición Ajax HTTP POST. Para ello uso el método $.post() de jQuery
+  - Realizo 4 peticiones al servidor (una por cada gráfica) mediante una petición *Ajax HTTP POST*. Para ello uso el método $.post() de *jQuery*
   - Recibo la información del servidor
   - Proceso los datos y los adapto para acomodarlo a los arrays que necesitaré
-  - Defino el tipo de gráficas que necesitaré y las parametrizo (usando la biblioteca de HighCharts)
+  - Defino el tipo de gráficas que necesitaré y las parametrizo (usando la biblioteca de *HighCharts*)
   - Los datos arrays obtenidos anteriormente los inserto en mis gráficas para que puedan ser representados en mi página Web
 
 #### Server Side
 
-Durante la confección de la página se ha tenido todo el tiempo en cuenta el diseño pensando en la accesibilidad. Una vez finalizada, se ha testeado manualmente y validado con distintas herramientas tanto online como extensiones del navegador obteniendo un _Nivel de Conformidad AA_ indicándose así que se han cumplido todos los puntos de control de Prioridad 1 y Prioridad 2 definidos en las Directrices de la **WAI** (_Web Accessibility Initiative_). Incluyendo al final de la página el icono correspondiente a su Nivel de Conformidad.
+En el servidor, tenemos hospedada nuestra base de datos *MySQL* `chinook` a la que accederemos a través del archivo `server.php`. Este archivo:
+  - Establecerá la conexión con nuestra base de datos a través del fichero `conexion.php`
+  - Mediante el uso de la variable *Superglobal* ***$_POST*** recopilará los datos que le ha enviado el cliente la petición HTTP POST
+  - Dependiendo del tipo de solicitud ejecutará una de las distintas consultas (*query*) de mi base de datos que tengo el servidor
+
+Para comunicar mi base de datos MySQL con mi aplicación PHP `server.php` usaré la ***API PHP mysqli extension*** mediante llamadas a funciones (procedural).
+
+`conexion.php`
+```
+<?php 
+$server = "localhost"; // El servidor que utilizaremos, en este caso será el localhost 
+$user = "andreu"; // El usuario que tiene privilegios en la base de datos 
+$pass = "andreu"; // La contraseña del usuario que utilizaremos 
+$database = "chinook"; // El nombre de la base de datos 
+$connection = mysqli_connect($server, $user, $pass);
+if (!$connection) { 
+    die('<strong>No pudo conectarse:</strong> ' . mysqli_connect_error()); // es equivalente a exit()
+}
+mysqli_select_db($connection, $database); 
+?>
+```
+
+El código de arriba crea una conexión con el servidor de MySQL hospedado en *$server=localhost* y a continuación selecciona la base de datos por defecto empleará *mysqli_select_db($connection, 'chinook')*
+
+`server.php`
+```
+$sql = "SELECT...";
+$query = mysqli_query($connection, $sql);
+$resultado =  mysqli_fetch_all($query,MYSQLI_NUM);
+echo json_encode($resultado);
+```
+De forma resumida este el código que realiza el servidor: 
+  - Realiza una consulta a la base de datos con `mysqli_query`
+  - Obtiene todas las filas de resultados y devuelve el conjunto de resultados como un array numérico con `mysqli_fetch_all`
+  - Devuelve los resultados al cliente que hizo la petición codificándolo antes en formato *JSON* con `json_encode`
+
 
 #### Validación del código
 
@@ -132,6 +167,9 @@ Revisando el tutorial que ofrece w3c.org [Tutorial HTML](https://www.w3schools.c
   - [php](https://www.php.net/) - Lenguaje de programación. Manuales de referencia
   - [Bootstrap](https://getbootstrap.com/) - Biblioteca multiplataforma para el diseño de sitios y aplicaciones web (front-end side). Templates y documentación de referencia
   - [HighCharts](https://www.highcharts.com/) - Biblioteca en JavaScript para visualización de gráficos (back-end side). Templates y documentación de referencia
+
+
+https://downloads.mysql.com/docs/apis-php-en.pdf
 
 ---
 [aNDREUET648](https://github.com/aNDREUET648)
