@@ -11,7 +11,7 @@
 - [Estructura](#estructura)
 - [Consideraciones](#consideraciones)
   - [Página principal](#página-principal)
-    - [index.php](#index.php)
+  > [index.php](#index.php)
   - [Accesibilidad](#accesibilidad)
   - [Validación del código](#validación-del-código)
   - [HTML Responsive Web Design](#HTML-Responsive-Web-Design)
