@@ -11,7 +11,7 @@
 - [Estructura](#estructura)
 - [Consideraciones](#consideraciones)
   - [Página principal](#página-principal)
-    - [Archivo index.php](#index.php) 
+    - [Archivo index.php](#index) 
   - [Accesibilidad](#accesibilidad)
   - [Validación del código](#validación-del-código)
   - [HTML Responsive Web Design](#HTML-Responsive-Web-Design)
@@ -85,7 +85,7 @@ Data Dashboard
   
 
 
-##### index.php
+##### index
 
 Mediante el uso de `<meta charset="UTF-8">` represento la codificación de carácteres UTF-8 (estándar en HTML5) aunque es posible que en algún proceso:
 
