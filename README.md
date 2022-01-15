@@ -81,7 +81,7 @@ Data Dashboard
 
   A continuación vemos una imagen ejemplo de lo que la página muestra al acceder a ella
 
- ![Sample Page](./blob/master/Data%20Dashboard/images/sample_page.png?raw=true "Muestra de la página resultante")
+ ![Sample Page](./Data%20Dashboard/images/sample_page.png?raw=true "Muestra de la página resultante")
   
   
 ```
