@@ -64,5 +64,6 @@ $resultado =  mysqli_fetch_all($query,MYSQLI_NUM);
 Un uso común del JSON es para el intercambio de información desde/hacia un servidor web
 En la instrucción de más abajo codifico el '$resultado' de la query a formato JSON
 y con el echo se envía al cliente
-*/echo json_encode($resultado);
+*/
+echo json_encode($resultado);
 ?>
