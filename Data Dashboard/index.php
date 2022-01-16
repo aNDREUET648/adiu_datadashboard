@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Include the JavaScript files    -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <!-- jQjery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <!-- jQuery CDN -->
     <script src="https://code.highcharts.com/highcharts.js"></script>                         <!-- HighCharts CDN -->
 
     <!-- Bootstrap CSS -->
